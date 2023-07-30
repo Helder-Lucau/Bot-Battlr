@@ -10,6 +10,7 @@ function App() {
       console.log(data);
     })
   })
+  
   return (
     <div className="App">
       <h1>Bot Battlr</h1>
