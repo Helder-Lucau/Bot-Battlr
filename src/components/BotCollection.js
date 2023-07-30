@@ -1,7 +1,7 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({ allBots }) {
+function BotCollection({ allBots, onDeleteBot }) {
   return (
     <div className="container">
       <h2>Bots Collection</h2>
