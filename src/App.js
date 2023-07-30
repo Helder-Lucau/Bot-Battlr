@@ -8,7 +8,7 @@ function App() {
 
   //fetch data from an external API 
   useEffect(() => {
-    fetch("http://localhost:8001/bots")
+    fetch("https://main-json.onrender.com/bots")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -16,11 +16,16 @@ function App() {
       }, []);
   });
 
+  function deleteBot(id) {
+    const deleteData = allBots.filter((deleteBotData) => deleteBotData.id !== id);
+    setAllBots(deleteData)
+  }
+
   return (
     <div className="App">
       <h1>Bot Battlr</h1>
       <YourBotArmy />
-      <BotCollection allBots={allBots} />
+      <BotCollection allBots={allBots} onDeleteBots={deleteBot}/>
     </div>
   );
 }

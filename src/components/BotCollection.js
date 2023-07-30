@@ -7,7 +7,7 @@ function BotCollection({ allBots, onDeleteBot }) {
       <h2>Bots Collection</h2>
       <div className="bot-collection">
         {allBots.map((bot) => (
-          <BotCard key={bot.id} botData={bot} />
+          <BotCard key={bot.id} botData={bot} onDelete={onDeleteBot} />
         ))}
       </div>
     </div>
