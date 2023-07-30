@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Bot-Battlr/static/css/main.6cc8940b.css",
+    "main.js": "/Bot-Battlr/static/js/main.7c566094.js",
+    "static/media/droid2.jpg": "/Bot-Battlr/static/media/droid2.4d5f121faadbc618c933.jpg",
+    "index.html": "/Bot-Battlr/index.html",
+    "main.6cc8940b.css.map": "/Bot-Battlr/static/css/main.6cc8940b.css.map",
+    "main.7c566094.js.map": "/Bot-Battlr/static/js/main.7c566094.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cc8940b.css",
+    "static/js/main.7c566094.js"
+  ]
+}
