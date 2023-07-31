@@ -27,10 +27,17 @@ border: 2px solid transparent;
   border-color: crimson;
 }
 .delete-btn {
-  color: crimson;
-  display: block;
+  color: white;
+  background-color: crimson;
+  display: flex;
+  font-size: 10px;
   position: absolute;
-  top: 25px;
-  border-radius: 50px;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 10px;
   cursor: pointer;
+  border: none;
+}
+.delete-btn:hover {
+  background-color:blue;
 }

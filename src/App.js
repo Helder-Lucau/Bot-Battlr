@@ -13,19 +13,19 @@ function App() {
       .then((data) => {
         console.log(data);
         setAllBots(data);
-      }, []);
-  });
+      })
+  }, [])
 
   function deleteBot(id) {
-    const deleteData = allBots.filter((deleteBotData) => deleteBotData.id !== id);
-    setAllBots(deleteData)
+    setAllBots(allBots.filter((deleteBotData) => deleteBotData.id !== id));
+    // setAllBots(deleteData)
   }
 
   return (
     <div className="App">
       <h1>Bot Battlr</h1>
       <YourBotArmy />
-      <BotCollection allBots={allBots} onDeleteBots={deleteBot}/>
+      <BotCollection displayAllBots={allBots} onDeleteBots={deleteBot} />
     </div>
   );
 }

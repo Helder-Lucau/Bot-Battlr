@@ -1,12 +1,12 @@
 import React from "react";
 import BotCard from "./BotCard";
 
-function BotCollection({ allBots, onDeleteBots }) {
+function BotCollection({ displayAllBots, onDeleteBots }) {
   return (
     <div className="container">
       <h2>Bots Collection</h2>
       <div className="bot-collection">
-        {allBots.map((bot) => (
+        {displayAllBots.map((bot) => (
           <BotCard key={bot.id} botData={bot} onDelete={onDeleteBots} />
         ))}
       </div>
