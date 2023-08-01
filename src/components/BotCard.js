@@ -1,20 +1,26 @@
 import React from "react";
 
-function BotCard({ botData, onDelete }) {
+function BotCard({ botData, onDelete, handleAddFavourite }) {
   const { id, name, health, damage, armor, catchphrase, avatar_url } = botData;
 
   //DELETE request using fetch API
   function handleDelete() {
     fetch(`https://main-json.onrender.com/bots/${id}`, {
       method: "DELETE",
-    })
-      onDelete(id);
-      // alert(`Bot ${name} deleted`)
+    });
+    onDelete(id);
+    // alert(`Bot ${name} deleted`)
+  }
+
+  function handleBotCard(e) {
+    handleAddFavourite(botData);
   }
 
   return (
-    <div className="bot-cards">
-      <button className="delete-btn"onClick={handleDelete} >X</button>
+    <div className="bot-cards" onClick={handleBotCard}>
+      <button className="delete-btn" onClick={handleDelete}>
+        X
+      </button>
       <img src={avatar_url} alt={name} className="botImage" />
       <div className="bot-desc">
         <h3 className="bot-name">{name}</h3>
